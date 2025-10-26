@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Abdulrahman's Kit • Wellspring Kids</title>
+<link rel="stylesheet" href="./style.css">
+<script defer src="./config.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="brand">Wellspring Kids</div>
+      <div class="badge">Personalized Kit</div>
+    </div>
+
+    <div class="card center">
+      <h1 id="title">Hello, Abdulrahman! 🚀</h1>
+      <p class="small">Your interactive story, games, video, and downloads live here.</p>
+      <div class="grid" style="margin-top:14px">
+        <a class="btn" href="./story.html">📖 Read My Story</a>
+        <a class="btn" href="./games.html">🧩 Play My Games</a>
+        <a class="btn" href="./videos.html">▶ Watch My Video</a>
+        <a class="btn" href="./downloads.html">📄 Downloads</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Tips for grown‑ups</h2>
+      <ul>
+        <li>Try the story first, then Game 1 → 3.</li>
+        <li>10 minutes/day is perfect. Celebrate small wins!</li>
+        <li>Worksheets are printable; answer key included.</li>
+      </ul>
+    </div>
+
+    <div class="footer center">© Wellspring Kids — demo starter</div>
+  </div>
+<script>
+  window.addEventListener('DOMContentLoaded',()=>{
+    const name = (window.config && window.config.childName) || "Your Child";
+    document.getElementById('title').textContent = `Hello, ${name}! 🚀`;
+  });
+</script>
+</body>
+</html>

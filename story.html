@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Story • Abdulrahman</title>
+<link rel="stylesheet" href="./style.css">
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/blasten/turn.js@4/turn.min.js"></script>
+<script defer src="./config.js"></script>
+</head>
+<body>
+  <div class="container center">
+    <div class="card center">
+      <h1 id="storyTitle">Abdulrahman's Magic Letters</h1>
+      <div class="player">
+        <audio id="music" controls>
+          <source id="musicSrc" src="" type="audio/mpeg">
+        </audio>
+      </div>
+      <div id="flipbook">
+        <img src="./assets/page1.png" alt="page 1">
+        <img src="./assets/page2.png" alt="page 2">
+        <img src="./assets/page3.png" alt="page 3">
+        <img src="./assets/page4.png" alt="page 4">
+        <img src="./assets/page5.png" alt="page 5">
+      </div>
+      <div style="margin-top:12px">
+        <a class="btn" href="./index.html">⬅ Back</a>
+      </div>
+    </div>
+  </div>
+<script>
+  $(function(){
+    $('#flipbook').turn({autoCenter:true, width:900, height:600, gradients:true, elevation:50});
+  });
+  window.addEventListener('DOMContentLoaded',()=>{
+    const cfg = window.config || {};
+    const title = `${cfg.childName || "Your Child"}’s Magic Letters`;
+    document.getElementById('storyTitle').textContent = title;
+    if(cfg.songUrl){ document.getElementById('musicSrc').src = cfg.songUrl; document.getElementById('music').load(); }
+  });
+</script>
+</body>
+</html>

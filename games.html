@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Games • Abdulrahman</title>
+<link rel="stylesheet" href="./style.css">
+<script defer src="./config.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="card center">
+      <h1>Play My Games</h1>
+      <p class="small">Personalized just for <span id="childName">Abdulrahman</span>.</p>
+      <div class="grid" style="margin-top:14px">
+        <a class="btn" id="g1" target="_blank" rel="noopener">Game 1</a>
+        <a class="btn" id="g2" target="_blank" rel="noopener">Game 2</a>
+        <a class="btn" id="g3" target="_blank" rel="noopener">Game 3</a>
+      </div>
+      <div style="margin-top:12px" class="center">
+        <a class="btn" href="./index.html">⬅ Back</a>
+      </div>
+    </div>
+  </div>
+<script>
+  window.addEventListener('DOMContentLoaded',()=>{
+    const cfg = window.config || {};
+    document.getElementById('childName').textContent = cfg.childName || "your child";
+    document.getElementById('g1').href = cfg.game1Url || "#";
+    document.getElementById('g2').href = cfg.game2Url || "#";
+    document.getElementById('g3').href = cfg.game3Url || "#";
+  });
+</script>
+</body>
+</html>

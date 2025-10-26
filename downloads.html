@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Downloads • Abdulrahman</title>
+<link rel="stylesheet" href="./style.css">
+<script defer src="./config.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="card center">
+      <h1>Downloads</h1>
+      <div class="grid" style="margin-top:14px">
+        <a class="btn" id="dl-worksheets" download>📄 Download Worksheets (PDF)</a>
+        <a class="btn" id="dl-certificate" download>🏅 Download Certificate (PDF)</a>
+      </div>
+      <p class="small" style="margin-top:10px">On iPhone: open → Share → Save to Files.</p>
+      <div style="margin-top:12px" class="center">
+        <a class="btn" href="./index.html">⬅ Back</a>
+      </div>
+    </div>
+  </div>
+<script>
+  window.addEventListener('DOMContentLoaded',()=>{
+    const cfg = window.config || {};
+    document.getElementById('dl-worksheets').href = cfg.worksheetsPdfUrl || "./files/worksheets.pdf";
+    document.getElementById('dl-certificate').href = cfg.certificatePdfUrl || "./files/certificate.pdf";
+  });
+</script>
+</body>
+</html>
